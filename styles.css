@@ -1,0 +1,259 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+    display: flex;
+    line-height: 1.6;
+}
+
+.sidebar {
+    width: 280px;
+    height: 100vh;
+    background-color: #1e1e1e;
+    position: fixed;
+    padding: 2.5rem 1.5rem;
+    border-right: 1px solid #333;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 2.5rem;
+    letter-spacing: 1.5px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    margin-bottom: 1.2rem;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #999;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+}
+
+.sidebar ul li a:hover {
+    color: #57caff;
+    padding-left: 8px;
+}
+
+.content {
+    margin-left: 280px;
+    padding: 5rem;
+    max-width: 1000px;
+}
+
+section {
+    margin-bottom: 5rem;
+    scroll-margin-top: 3rem;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: #57caff;
+    margin-bottom: 1.2rem;
+    border-bottom: 1px solid #333;
+    padding-bottom: 0.6rem;
+}
+
+p {
+    margin-bottom: 1.2rem;
+    color: #bcbcbc;
+}
+
+code {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #2d2d2d;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    color: #f8c455;
+}
+
+pre {
+    background-color: #2d2d2d;
+    padding: 1.2rem;
+    border-radius: 8px;
+    overflow-x: auto;
+    margin: 1.5rem 0;
+    border: 1px solid #444;
+}
+
+.info-box {
+    background-color: #1a2635;
+    border-left: 4px solid #00d1b2;
+    padding: 1.2rem;
+    margin: 2rem 0;
+    border-radius: 0 8px 8px 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.5rem;
+}
+
+th, td {
+    text-align: left;
+    padding: 14px;
+    border-bottom: 1px solid #333;
+}
+
+th {
+    background-color: #252525;
+    color: #59c1f1;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    color: #ff542a;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+a:visited {
+    color: #f79c51;
+}
+
+.doc-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 2rem 0;
+    border-radius: 8px;
+    border: 1px solid #333;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.image-caption {
+    text-align: left;
+    font-size: 0.9rem;
+    color: #888;
+    margin-top: -1.5rem;
+    margin-bottom: 2rem;
+    font-style: italic;
+}
+
+.converter-container {
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    max-width: 550px;
+}
+
+.converter-container h3 {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.converter-inputs {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.input-group label {
+    font-size: 0.8rem;
+    color: #888;
+    margin-bottom: 0.5rem;
+}
+
+.input-group input {
+    background: #2d2d2d;
+    border: 1px solid #444;
+    border-radius: 6px;
+    padding: 0.8rem;
+    color: #fff;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.input-group input:focus {
+    border-color: #9e9e9e;
+}
+
+.converter-arrow {
+    font-size: 1.5rem;
+    color: #ffffff;
+    padding-top: 1.5rem;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+#data-string {
+    width: 100%;
+    max-width: 100%;
+    min-height: 100px;
+    max-height: 500px;
+    resize: vertical;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.9rem;
+}
+
+#song-name {
+    box-sizing: border-box;
+    padding: 10px;
+    background: #2d2d2d;
+    border: 1px solid #444;
+    color: #fff;
+    border-radius: 6px;
+    outline: none;
+}
+
+#song-name:focus {
+    border-color: #fff;
+}
+
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        padding: 2rem;
+    }
+    .content {
+        margin-left: 0;
+        padding: 2rem;
+    }
+}
